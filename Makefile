@@ -257,6 +257,9 @@ qemu-nox-gdb: fs.img xv6.img .gdbinit
 	@echo "*** Now run 'gdb'." 1>&2
 	$(QEMU) -nographic $(QEMUOPTS) -S $(QEMUGDB)
 
+zip:
+	git archive --format zip --output ${USER}-xv6.zip HEAD
+
 # CUT HERE
 # prepare dist for students
 # after running make dist, probably want to
